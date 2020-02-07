@@ -55,4 +55,5 @@ add_sub(5, 10, 15)
 
 {try it}(python3 code/functions/parameters.py 4)
 
-Insert reading question
+{Check It!|assessment}(fill-in-the-blanks-1319908872)
+

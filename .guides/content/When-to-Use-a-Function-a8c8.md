@@ -29,7 +29,7 @@ house()
 turtle.mainloop()
 ```
 
-{Try it|terminal}(sh .guides/bg.sh python3 code/functions/when-functions.py)
+{Try it}(bash .guides/bg.sh python3 code/functions/when-functions.py)
 
 |||challenge
 ## Add a Door

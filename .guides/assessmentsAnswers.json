@@ -1,1 +1,30 @@
-
+[
+ {
+  "taskId": "multiple-choice-1804598706",
+  "points": 0,
+  "state": {
+   "active": [
+    "a8aa3afb-9a8a-a23d-6002-88547ac71abc",
+    "726cca93-629d-603a-2391-e85f18c8ccc6",
+    "2c1f8719-040c-e788-70f6-463a347f7760"
+   ]
+  },
+  "results": [
+   {
+    "current": [
+     "a8aa3afb-9a8a-a23d-6002-88547ac71abc",
+     "726cca93-629d-603a-2391-e85f18c8ccc6",
+     "2c1f8719-040c-e788-70f6-463a347f7760"
+    ],
+    "right": [
+     "726cca93-629d-603a-2391-e85f18c8ccc6",
+     "a8aa3afb-9a8a-a23d-6002-88547ac71abc",
+     "2c1f8719-040c-e788-70f6-463a347f7760",
+     "5d4efaaf-fccf-3f1d-1b0e-ee233c53202c"
+    ],
+    "timestamp": 1581110799722,
+    "state": "fail"
+   }
+  ]
+ }
+]

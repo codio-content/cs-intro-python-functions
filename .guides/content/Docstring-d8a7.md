@@ -28,7 +28,7 @@ help(greet_twice)
 
 ## Docstring
 
-The `help` function does not provide any information for user-defined functions. Add a docstring to a user-defined function will provide output for the `help` function. A docstring goes between the function header and the function body. Use triple-quotes to create a string which explains what the function does and how to use it. Remember, triple-quotes respect all of the whitespace in the string. You can indent or and to a new line to increase readability.
+The `help` function does not provide any information for user-defined functions. Adding a docstring to a user-defined function will provide output for the `help` function. A docstring goes between the function header and the function body. Use triple-quotes to create a string which explains what the function does and how to use it. Remember, triple-quotes respect all of the whitespace in the string. You can indent or add a new line to increase readability.
 
 ![Docstring](.guides/images/docstring.png)
 
