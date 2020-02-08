@@ -51,8 +51,8 @@ def return_float(num1, num2):
     return(num1 / num2)
   
 def return_string(string):
-    """Return the value of string appended to 'Hello` """
-    return("Hello".append(string))
+    """Return the value of string appended to 'Hello' """
+    return("Hello" + string)
   
 print(return_int(10, 3))
 print(return_float(10, 3))
@@ -68,6 +68,6 @@ If you want to return a list, it is a good idea to have a list be passed as a pa
 
 |||
 
-{try it}(python3 code/path/to_file.py 4)
+{try it}(python3 code/functions/returning-values.py 5)
 
 {Check It!|assessment}(multiple-choice-1906116983)

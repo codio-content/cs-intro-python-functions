@@ -501,11 +501,11 @@
   "source": {
    "name": "defining and calling a function",
    "showName": false,
-   "instructions": "## Formative Assessment\n\nRearrange the code blocks below to create a program that prints the following output:\n\n```text\nClouds are white.\nFiretrucks are red.\nGrass is green.\n```\n\n**Note**, not all of the code blocks will be used.",
-   "initial": "def color_sentences(white, red, green):\n    print(\"{} are white.\\n{} are red.\\n{} is green.\".format(white, red, green)\ncolor_sentences(\"Clouds\", \"Firetrucks\", \"Grass\")\ncolors(\"Clouds\", \"Firetrucks\", \"Grass\") #distractor\ncolor_sentences(\"Firetrucks\", \"Clouds\", \"Grass\") #distractor\ndef color_sentences(red, green, white): #distractor",
+   "instructions": "## Formative Assessment\n\nRearrange the code blocks below to create a program that prints the following output:\n\n```text\nClouds are white. Firetrucks are red. Grass is green.\n```\n\n**Note**, not all of the code blocks will be used.",
+   "initial": "def color_sentences(white, red, green):\n    print(\"{} are white. {} are red. {} is green.\".format(white, red, green)\ncolor_sentences(\"Clouds\", \"Firetrucks\", \"Grass\")\ncolors(\"Clouds\", \"Firetrucks\", \"Grass\") #distractor\ncolor_sentences(\"Firetrucks\", \"Clouds\", \"Grass\") #distractor\ndef color_sentences(red, green, white): #distractor",
    "options": "{\n  \"sortableId\":\"sortable\",\n  \"trashId\":\"sortableTrash\"\n}",
    "grader": "",
-   "guidance": "There are two choices for the function header. Since there are no named parameters in the function calls, the order of the function header and the function call must align so that the string `\"Clouds\"` is stored in the parameter `white`, the string `\"Firetrucks\"` is stored in the parameter `red`, and `\"Grass\"` is stored in the parameter `green`. The only combination where this works is `def color_sentences(white, red, green):` and `color_sentences(\"Clouds\", \"Firetrucks\", \"Grass\")`. There is only one print statement to choose.\n\n```python\ndef color_sentences(white, red, green):\n    print(\"{} are white.\\n{} are red.\\n{} is green.\".format(white, red, green)\ncolor_sentences(\"Clouds\", \"Firetrucks\", \"Grass\")\n```",
+   "guidance": "There are two choices for the function header. Since there are no named parameters in the function calls, the order of the function header and the function call must align so that the string `\"Clouds\"` is stored in the parameter `white`, the string `\"Firetrucks\"` is stored in the parameter `red`, and `\"Grass\"` is stored in the parameter `green`. The only combination where this works is `def color_sentences(white, red, green):` and `color_sentences(\"Clouds\", \"Firetrucks\", \"Grass\")`. There is only one print statement to choose.\n\n```python\ndef color_sentences(white, red, green):\n    print(\"{} are white. {} are red. {} is green.\".format(white, red, green)\ncolor_sentences(\"Clouds\", \"Firetrucks\", \"Grass\")\n```",
    "showGuidanceAfterResponse": true,
    "points": 1,
    "oneTimeTest": true,
@@ -531,13 +531,7 @@
     "files": [
      "code/functions/check-parameters.py"
     ],
-    "opened": [
-     {
-      "type": "file",
-      "panelNumber": 0,
-      "content": "code/functions/check-parameters.py"
-     }
-    ]
+    "opened": []
    },
    "bloomsObjectiveLevel": "3",
    "learningObjectives": "SWBAT construct a function definition and function call to match a predetermined set of output"
@@ -1289,7 +1283,7 @@
   "source": {
    "name": "reading question modularity",
    "showName": false,
-   "instructions": "## Reading Question\n\nWhat are the benefits to modular functions? **Note**, there is more than one correct answer.",
+   "instructions": "## Reading Question\n\nWhat are the benefits to modular functions?",
    "multipleResponse": true,
    "answers": [
     {
@@ -1300,7 +1294,17 @@
     {
      "_id": "428ba8bc-8ac2-e354-0fd9-77ca7dcd0003",
      "correct": false,
-     "answer": "blah"
+     "answer": "Python limits the number of functions that can exist in a program. Modular functions keep you from experiencing this problem."
+    },
+    {
+     "_id": "87569d1b-eb74-ce7d-86d0-b55ace8d392c",
+     "correct": false,
+     "answer": "There are no benefits to using modular functions."
+    },
+    {
+     "_id": "b26d786f-18ab-d743-8f9d-8aaba58dc40b",
+     "correct": false,
+     "answer": "Python runs several smaller functions faster than a larger function."
     }
    ],
    "guidance": "",
@@ -1333,7 +1337,7 @@
     "opened": [
      {
       "type": "preview",
-      "panelNumber": 0,
+      "panelNumber": 1,
       "content": "https://{{domain3000}}/"
      },
      {
@@ -1985,7 +1989,7 @@
      "answer": "5\n7"
     }
    ],
-   "guidance": "The parameter `x` is an optional parameter. That means the function can be called with no parameters, and Python will assign `x` the value of five`. If `7` is passed as a parameter to the function, then `7` will be used for the value of `x`.\n\n```\n5\n7\n```",
+   "guidance": "The parameter `x` is an optional parameter. That means the function can be called with no parameters, and Python will assign `x` the value of five. If `7` is passed as a parameter to the function, then `7` will be used for the value of `x`.\n\n```\n5\n7\n```",
    "showGuidanceAfterResponse": true,
    "showExpectedAnswer": true,
    "points": 1,
@@ -2030,7 +2034,7 @@
   "source": {
    "name": "lab question function composition",
    "showName": false,
-   "instructions": "## Lab Question\n\nLook at this code and fill in the blank below.\n\n```python\nprint_movie_data(sort_movie_data(movie_data, 2, True))\n```\n",
+   "instructions": "## Lab Question\n\nLook at this code and fill in the blank below. **Hint**, the solution is two words.\n\n```python\nprint_movie_data(sort_movie_data(movie_data, 2, True))\n```\n",
    "text": "The function `print_movie_data` has another function, `sort_movie_data` as a parameter. This is an example of <<<function composition>>>.",
    "guidance": "When a function has another function as a parameter, this is called function composition.",
    "showGuidanceAfterResponse": true,
@@ -3006,6 +3010,75 @@
      "."
     ]
    }
+  }
+ },
+ {
+  "type": "multiple-choice",
+  "taskId": "multiple-choice-104866506",
+  "source": {
+   "name": "reading question pass and functions",
+   "showName": false,
+   "instructions": "## Reading Question\n\nWhat does `pass` do?",
+   "multipleResponse": false,
+   "answers": [
+    {
+     "_id": "41c3d1ff-2f66-cf99-f1c5-8b11e6f533e4",
+     "correct": false,
+     "answer": "`pass` is the default parameter for every Python function."
+    },
+    {
+     "_id": "9563fdd7-d0b7-e17f-60a3-51237acab2f1",
+     "correct": true,
+     "answer": "`pass` allows you to have a function header but acts as a placeholder for the function body until you write it."
+    },
+    {
+     "_id": "5cb569a5-8a16-9fdb-3c08-279cfedc1f9f",
+     "correct": false,
+     "answer": "`pass` makes Python run your code faster. "
+    },
+    {
+     "_id": "090513d7-cf69-2346-5d5e-e0c9004e1882",
+     "correct": false,
+     "answer": "`pass` is required for every function written in Python."
+    }
+   ],
+   "guidance": "The `pass` keyword is a placeholder for a function body. This allows you code to run without errors even though the function has not yet been written.",
+   "showGuidanceAfterResponse": true,
+   "showExpectedAnswer": true,
+   "points": 1,
+   "incorrectPoints": 0,
+   "metadata": {
+    "tags": [
+     {
+      "name": "Assessment Type",
+      "value": "Multiple Choice"
+     },
+     {
+      "name": "Content",
+      "value": "Functions"
+     },
+     {
+      "name": "Programming Language",
+      "value": "Python"
+     },
+     {
+      "name": "Category",
+      "value": "Pass keyword"
+     }
+    ],
+    "files": [
+     "code/functions/movie-app.py"
+    ],
+    "opened": [
+     {
+      "type": "file",
+      "panelNumber": 0,
+      "content": "code/functions/movie-app.py"
+     }
+    ]
+   },
+   "bloomsObjectiveLevel": "2",
+   "learningObjectives": "SWBAT define a use-case for the pass keyword"
   }
  }
 ]

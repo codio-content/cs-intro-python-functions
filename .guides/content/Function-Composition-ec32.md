@@ -24,25 +24,13 @@ print(area(radius(0, 0, 4, 4)))
 
 {try it}(python3 code/functions/function-composition.py 1)
 
-|||challenge
-## Function Composition for Pi
-Create a function that calculates an approximation of pi. Use function composition to incorporate the value of pi with the `area` function. The approximation of pi can be done in a variety of ways:
-* $$\pi$$ = circumference / diameter.
-* $$\pi$$ = `x` * sine (180 / `x`). **Note**, the bigger the number used for `x`, the more accurate the approximation will be.
-* $$\pi$$ = the number of radians in 180 degrees.
-<details><summary>**Solution**</summary>Here is one possible solution.<img src=".guides/images/pi-function-composition.png" /></details>
-
-|||
-
-{try it}(python3 code/functions/function-composition.py 2)
-
 ## Function Composition vs Helper Functions
 
 Both function composition and helper functions provide the same functionality. Using one over the other will not affect the end result. However, function composition offers improved readability. Look at the two function calls below:
 
 ```python
 circle_area1(x1, y1, x2, y2)
-circle_area2(radius(x1, y1, x2, y2, pi()))
+circle_area2(radius(x1, y1, x2, y2), math.pi)
 ```
 
 Without seeing the function definitions, it is not clear how area can be derived from two points on a Cartesian plane in the first function call. The second function makes it very clear that the radius and pi are being used to calculate the area.

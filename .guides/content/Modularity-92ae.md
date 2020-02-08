@@ -46,7 +46,7 @@ rectangle(20, 20) #draw the right window
 turtle.mainloop()
 ```
 
-{Try it|terminal}(sh .guides/bg.sh python3 code/functions/modularity.py)
+{Try it}(bash .guides/bg.sh python3 code/functions/modularity.py)
 
 These functions are modular in that each one draws a shape. More importantly, the functions were written with parameters to specify the size of each shape. Modularity makes functions reusable. This way you do not have write a function for the house, another for the door, and a third for the windows.
 
@@ -57,6 +57,6 @@ Change the code to draw a house that is half of the size of the original.
 
 |||
 
-{Try it|terminal}(sh .guides/bg.sh python3 code/functions/modularity.py)
+{Try it}(bash .guides/bg.sh python3 code/functions/modularity.py)
 
 {Check It!|assessment}(multiple-choice-2677448801)

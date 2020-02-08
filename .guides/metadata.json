@@ -576,7 +576,7 @@
     },
     {
      "path": "#preview: https://{{domain3000}}/",
-     "panel": 0,
+     "panel": 1,
      "action": "open"
     },
     {
@@ -585,7 +585,7 @@
      "action": "open"
     }
    ],
-   "layout": "2-panels",
+   "layout": "3-cell",
    "path": [],
    "type": "markdown",
    "content-file": ".guides/content/Modularity-92ae.md",

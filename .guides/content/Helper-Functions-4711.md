@@ -15,17 +15,13 @@ The area function is dependent upon the distance formula. This is where helper f
 ```python
 import math
 
-def calc_pi():
-    """Calculate an approxiate value for pi"""
-    return(math.radians(180))
-
 def radius(x1, y1, x2, y2):
     """Distance formula to determine the radius of a circle"""
     return(math.sqrt((x2 - x1)**2 + (y2 - y1)**2))
   
 def area(x1, y1, x2, y2):
     """Area of a circle function"""
-    return(calc_pi() * radius(x1, y1, x2, y2)**2)
+    return(math.pi * radius(x1, y1, x2, y2)**2)
 
 print(area(0, 0, 4, 4))
 ```
@@ -33,13 +29,10 @@ print(area(0, 0, 4, 4))
 {try it}(python3 code/functions/helper-functions.py 1)
 
 |||challenge
-## Pi Helper Function
-Create a helper function that calculates an approximation of pi. This can be done in a variety of ways:
-* $$\pi$$ = circumference / diameter.
-* $$\pi$$ = `x` * sine (180 / `x`). **Note**, the bigger the number used for `x`, the more accurate the approximation will be.
-* $$\pi$$ = the number of radians in 180 degrees.
+## Use `math.pow` instead of `**2`
+Since the `math` module is being used, replace the `**2` with `math.pow` in the distance formula above. To square the number 3, you would write `math.pow(3, 2)`.
 
-<details><summary>**Solution**</summary>Here is one possible solution. <img src=".guides/images/pi-helper-function.png" /></details>
+<details><summary>**Solution**</summary> `math.sqrt(math.pow(x2 - x1) + math.pow(y2 - y1))`</details>
 
 |||
 

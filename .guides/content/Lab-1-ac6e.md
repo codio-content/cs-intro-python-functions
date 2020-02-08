@@ -1,4 +1,4 @@
-## Lab 2 - Building a Command Line Application
+## Lab 1 - Building a Command Line Application
 
 The next couple of labs will walk you through making a command line application that sorts a slightly modified version of this [movie data](https://gist.github.com/tiangechen/b68782efa49a16edaf07dc2cdaa855ea). 
 
@@ -10,16 +10,15 @@ This lab focuses on reading the information from a CSV file, and then printing t
 The most important function is the one that reads the information from a CSV file. Once the file has been read, the information will be stored in the variable `movie_data`, and the file will be closed. There is no need to leave the file open for this program. You will need global variables for the path and file name of the CSV file. The program should print `None`.
 
 ```python
-import os, csv
+import csv
 
-path = "student_folder/.labs"
-file_name = "movie_data.csv"
+movie_csv = "student_folder/.labs/movie_data.csv"
 
-def fetch_movie_data(path, file_name):
+def fetch_movie_data(movie_csv):
     """Return movie data from a CSV file"""
     pass
 
-movie_data = fetch_movie_data(path, file_name) 
+movie_data = fetch_movie_data(movie_csv) 
 print(movie_data)
 ```
 
@@ -30,21 +29,20 @@ print(movie_data)
 Using `with open`, read the entire CSV file and then pass it to a `csv.reader`. Create the local variable `movie_info` and set it to an empty list. Use a for loop to iterate through the file and append each row to the list `movie_info`. Once done iterating through the file, return `movie_info`. Running the program now should return a list of lists with a bunch of information that is hard to understand.
 
 ```python
-import os, csv
+import csv
 
-path = "student_folder/.labs"
-file_name = "movie_data.csv"
+movie_csv = "student_folder/.labs/movie_data.csv"
 
-def fetch_movie_data(path, file_name):
+def fetch_movie_data(movie_csv):
     """Return movie data from a CSV file"""
-    with open(os.path.join(path, file_name), "r") as movie_file:
+    with open(movie_csv, "r") as movie_file:
         reader = csv.reader(movie_file)
         movie_info = []
         for row in reader:
           movie_info.append(row)
         return movie_info
 
-movie_data = fetch_movie_data(path, file_name) 
+movie_data = fetch_movie_data(movie_csv) 
 print(movie_data)
 ```
 
@@ -56,14 +54,13 @@ Since this is a command line application, the output should be easy to read for 
 <details><summary>**Formatting a String with Padding**</summary><img src=".guides/images/formatting-columns.png" /></details>
 
 ```python
-import os, csv
+import csv
 
-path = "student_folder/.labs"
-file_name = "movie_data.csv"
+movie_csv = "student_folder/.labs/movie_data.csv"
 
-def fetch_movie_data(path, file_name):
+def fetch_movie_data(movie_csv):
     """Return movie data from a CSV file"""
-    with open(os.path.join(path, file_name), "r") as movie_file:
+    with open(movie_csv, "r") as movie_file:
         reader = csv.reader(movie_file)
         movie_info = []
         for row in reader:
@@ -75,7 +72,7 @@ def print_movie_data(data):
     for title, genre, rotten, gross, year in data:
       print("{:36} {:10} {:18} {:16} {}".format(title, genre, rotten, gross, year))
       
-movie_data = fetch_movie_data(path, file_name) 
+movie_data = fetch_movie_data(movie_csv) 
 print_movie_data(movie_data)
 ```
 
