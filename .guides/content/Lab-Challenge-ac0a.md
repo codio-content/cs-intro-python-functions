@@ -1,8 +1,8 @@
 Write the function `to_upper` which accepts a string parameter. The function should return string, but in all caps.
 
-If the function is passed `hello` then the output should be `HELLO`.
+The `TRY IT` button below will test your code with `hello`. If your code returns `HELLO` then you will receive the message that your code passed the test.
 
-{try it|terminal}(python3 code/functions/lab_challenge.py)
+{try it}(python3 .guides/secure/unit_tests/functions/lab_try_it_helper.py)
 
 {Check It!|assessment}(test-1891014617)
 

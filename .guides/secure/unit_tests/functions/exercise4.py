@@ -1,12 +1,11 @@
-import csv, os
+import csv
 
-file_name = "mlb_data.csv"
-file_path = "student_folder/.exercises"
+mlb_data = "student_folder/.exercises/mlb_data.csv"
 
-def best_team(f_name, f_path):
+def best_team(file):
     """Read a CSV of baseball data.
     Return the team name with the most wins"""
-    with open(os.path.join(f_path, f_name), "r") as csv_file:
+    with open(file, "r") as csv_file:
         reader = csv.reader(csv_file)
         next(reader)
         most_wins = 0
@@ -17,4 +16,4 @@ def best_team(f_name, f_path):
                 best_team = row[0]
         return best_team
       
-print(best_team(file_name, file_path))
+print(best_team(mlb_data))

@@ -7,7 +7,8 @@ Write a function called `search_list` that takes a list and a search term as par
 
 **Expected Output**
 * If the function call is `search_list(["dog", "fish", "cat"], "Cat")`, the the function would return `2`
-* If the function call is `search_list(["dog", "fish", "cat"], "mouse")`, the the function would return `-1`
+* If the function call is `search_list(["water", "Toy",  "house"], toy)`, then the function would return `1`
+* If the function call is `search_list(["box", "car", "hat"], "mouse")`, the the function would return `-1`
 
 [Code Visualizer](open_tutor code/functions/exercise3.py)
 {try it}(python3 code/functions/exercise3.py)

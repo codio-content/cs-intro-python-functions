@@ -49,7 +49,7 @@ print(movie_data)
 {try it}(python3 code/functions/movie-app.py 2)
 
 ### Printing the Movie Information
-Since this is a command line application, the output should be easy to read for humans. The `print` command will print square brackets, and it does not format the output. It is not sufficient. Create the function `print_movie_data` that takes the parameter `data`. Use the unpacking method to be able to reference each element of the list. The `{:10}` syntax adds padding to the right of the string. This will align all of the data in neat rows. Add a function call for `print_movie_data` and remove `print(movie_data)`.
+Since this is a command line application, the output should be easy to read for humans. The `print` command will print square brackets, and it does not format the output. It is not sufficient. Create the function `print_movie_data` that takes the parameter `data`. Use the unpacking method to be able to reference each element of the list. The `{:10}` syntax adds padding to the right of the string. This will align all of the data in neat rows. A `$` needs to be added for `gross` so that the user knows that column relates to money. Add a function call for `print_movie_data` and remove `print(movie_data)`.
 
 <details><summary>**Formatting a String with Padding**</summary><img src=".guides/images/formatting-columns.png" /></details>
 
@@ -70,7 +70,7 @@ def fetch_movie_data(movie_csv):
 def print_movie_data(data):
     """Print the movie data in easy to read columns"""
     for title, genre, rotten, gross, year in data:
-      print("{:36} {:10} {:18} {:16} {}".format(title, genre, rotten, gross, year))
+      print("{:36} {:10} {:18} ${:16} {}".format(title, genre, rotten, gross, year))
       
 movie_data = fetch_movie_data(movie_csv) 
 print_movie_data(movie_data)

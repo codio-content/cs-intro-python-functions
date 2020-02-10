@@ -23,7 +23,7 @@ def test_student_code():
         test1 = True
         print("Test 1 <b>passed</b>.")
     else:
-        print("Test 2 did <b>not pass</b>.")
+        print("Test 1 did <b>not pass</b>.")
         
     # Second test case
     if to_upper("Calvin and Hobbes") == "CALVIN AND HOBBES":
@@ -37,7 +37,7 @@ def test_student_code():
         test3 = True
         print("Test 3 <b>passed</b>.")
     else:
-        print("Test 2 did <b>not pass</b>.")
+        print("Test 3 did <b>not pass</b>.")
     
     # Return results of the unit tests
     print("<hr>")
