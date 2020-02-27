@@ -38,6 +38,6 @@ Write a new function that adds a door to the house. Hint, move the turtle to an 
 
 |||
 
-{Try it|terminal}(sh .guides/bg.sh python3 code/functions/when-functions.py)
+{Try it}(bash .guides/bg.sh python3 code/functions/when-functions.py)
 
 {Check It!|assessment}(multiple-choice-531814659)

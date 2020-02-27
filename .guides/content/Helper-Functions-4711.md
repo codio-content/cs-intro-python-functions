@@ -29,10 +29,10 @@ print(area(0, 0, 4, 4))
 {try it}(python3 code/functions/helper-functions.py 1)
 
 |||challenge
-## Use `math.pow` instead of `**2`
-Since the `math` module is being used, replace the `**2` with `math.pow` in the distance formula above. To square the number 3, you would write `math.pow(3, 2)`.
+## Another way to do powers
+Another way to do powers is to use `math.pow`. This function has two arguments, the base and the exponent. So `3 ** 2` becomes `math.pow(3, 2)`. Rewrite the `return` statements for the two functions above using `math.pow`.
 
-<details><summary>**Solution**</summary> `math.sqrt(math.pow(x2 - x1) + math.pow(y2 - y1))`</details>
+<details><summary>**Solution**</summary> `math.sqrt(math.pow(x2 - x1, 2) + math.pow(y2 - y1, 2))` and `math.pi * math.pow(radius(x1, y1, x2, y2), 2)`</details>
 
 |||
 
