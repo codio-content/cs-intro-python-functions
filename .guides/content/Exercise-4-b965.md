@@ -10,7 +10,7 @@ mlb_data = "student_folder/.exercises/mlb_data.csv"
 ```
 
 **Expected Output**
-The function call should look like this, `best_team(file_name, file_path)`, and the function should return `HOU`. However, your function will be tested with other CSV files in which different teams will have the highest win total.
+The function call should look like this, `best_team(file)`, and the function should return `HOU`. However, your function will be tested with other CSV files in which different teams will have the highest win total.
 
 {try it}(python3 code/functions/exercise4.py)
 

@@ -32,7 +32,7 @@ print(area(0, 0, 4, 4))
 ## Another way to do powers
 Another way to do powers is to use `math.pow`. This function has two arguments, the base and the exponent. So `3 ** 2` becomes `math.pow(3, 2)`. Rewrite the `return` statements for the two functions above using `math.pow`.
 
-<details><summary>**Solution**</summary> `math.sqrt(math.pow(x2 - x1, 2) + math.pow(y2 - y1, 2))` and `math.pi * math.pow(radius(x1, y1, x2, y2), 2)`</details>
+<details><summary>**Solution**</summary> The new return statements are: `return(math.sqrt(math.pow(x2 - x1, 2) + math.pow(y2 - y1, 2)))` and `return(math.pi * math.pow(radius(x1, y1, x2, y2), 2))`</details>
 
 |||
 
@@ -49,9 +49,9 @@ def area(x1, y1, x2, y2):
     """Area of a circle function"""
     def radius(x1, y1, x2, y2):
         """Distance formula to determine the radius of a circle"""
-        return(math.sqrt((x2 - x1)**2 + (y2 - y1)**2))
+        return math.sqrt(math.pow(x2 - x1, 2) + math.pow(y2 - y1, 2))
     
-    return(math.pi * radius(x1, y1, x2, y2)**2)
+    return(math.pi * math.pow(radius(x1, y1, x2, y2), 2))
   
 print(area(0, 0, 4, 4))
 ```
@@ -59,9 +59,14 @@ print(area(0, 0, 4, 4))
 {try it}(python3 code/functions/helper-functions.py 3)
 
 |||challenge
-## Inner Function
-Make `calc_pi` an inner function of `area` as well.
-<details><summary>**Solution**</summary>Here is one possible solution.<img src=".guides/images/pi-inner-function.png" /> </details>
+## What happens if you:
+Try to call the `radius` function from your program?
+
+```python
+print(radius(0, 0, 4, 4))
+```
+
+<details><summary>**Why does this cause an error?**</summary>Just as variables have scope, so do functions. The Python program cannot "see" inside the `area` function, so it cannot call the `radius` function. That is why your code produces the error `NameError: name 'radius' is not defined`.</details>
 
 |||
 

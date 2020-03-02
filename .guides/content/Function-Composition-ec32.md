@@ -13,11 +13,11 @@ import math
 
 def area(r):
     """Area of a circle"""
-    return(math.pi * r ** 2)
+    return(math.pi * math.pow(r, 2))
 
 def radius(x1, y1, x2, y2):
     """Distance formula to calculate the radius"""
-    return(math.sqrt((x2 - x1)**2 + (y2 - y1)**2))
+    return(math.sqrt(math.pow(x2 - x1, 2) + math.pow(y2 - y1, 2)))
 
 print(area(radius(0, 0, 4, 4)))
 ```

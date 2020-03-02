@@ -57,6 +57,6 @@ Change the code to draw a house that is half of the size of the original.
 
 |||
 
-{Try it}(bash .guides/bg.sh python3 code/functions/modularity.py)
+{Try it}(bash .guides/bg.sh python3 code/functions/modularity.py 1)
 
 {Check It!|assessment}(multiple-choice-2677448801)

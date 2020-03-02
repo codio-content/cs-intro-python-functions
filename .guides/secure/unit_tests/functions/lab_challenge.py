@@ -1,2 +1,2 @@
-def to_upper(s):
-  return s.lower()
+def to_upper(txt):
+    return txt.upper()

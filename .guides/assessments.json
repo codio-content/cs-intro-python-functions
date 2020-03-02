@@ -1307,7 +1307,7 @@
      "answer": "Python runs several smaller functions faster than a larger function."
     }
    ],
-   "guidance": "",
+   "guidance": "Modular functions make them more reusable, which is a benefit. There is no limit to the number of functions a Python program can have. The speed of execution for Python code does not depend on the length of functions.",
    "showGuidanceAfterResponse": true,
    "showExpectedAnswer": true,
    "points": 1,
