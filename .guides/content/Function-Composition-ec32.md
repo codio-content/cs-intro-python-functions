@@ -53,6 +53,23 @@ print(math.sqrt(int("25")))
 
 {try it}(python3 code/functions/function-composition.py 4)
 
-<details><summary>**Limits of Function Composition and Readability**</summary>Function composition can improve readability, but there is a limit. The following code is an example of function composition taken too far.<br> <code>print(len(str(math.sqrt(math.pow(3, math.degrees(math.sin(5.79)))))))</code><br>This may be valid code and Python may not have any trouble understanding the code, it is not very readable for humans. Instead, try breaking the function composition into smaller, more accessible parts.<img src=".guides/images/multistep-function-composition.png" /></details>
+<details>
+  <summary><strong>Limits of Function Composition and Readability</strong></summary>
+  Function composition can improve readability, but there is a limit. The following code is an example of function composition taken too far. 
+  
+  ```python
+  print(len(str(math.sqrt(math.pow(3, math.degrees(math.sin(5.79)))))))
+  ```
+  
+  This may be valid code and Python may not have any trouble understanding the code, it is not very readable for humans. Instead, try breaking the function composition into smaller, more accessible parts.
+  
+  ```python
+  step1 = math.degrees(math.sin(5.79))
+  step2 = math.sqrt(math.pow(3, step1))
+  step3 = len(str(step2))
+  print(step3)
+  ```
+  
+</details>
 
 {Check It!|assessment}(multiple-choice-2948315125)

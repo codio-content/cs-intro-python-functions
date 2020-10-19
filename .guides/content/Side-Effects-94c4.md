@@ -27,6 +27,8 @@ for i in range(10):
 ## What happens if you:
 * Change the program to look like this:
 ```python
+my_num = 0
+
 def add_5():
     """Add 5 to my_num and return the new number"""
     return(my_num + 5)
@@ -35,7 +37,10 @@ for i in range(10):
     my_num = add_5()
     print(my_num)
 ```
-<details><summary>**Why the above code is not preferred**</summary>The code where `add_5` has no parameters produces the exact same output as the code where `add_5` has a parameter. However, the code where `add_5` has a parameter is preferable to the code where `add_5` does not have a parameter. The function without the parameter relies on the global variable `my_num`. If you were to copy/paste this function into another program, it would only work if there was a global variable named `my_num`. The function with the parameter, however, will work in used in another program. Having the parameter means the function is not dependent upon specific global variables. This reduces the chance for an error.</details>
+<details>
+  <summary><strong>Why the above code is not preferred</strong></summary>
+  The code where <code>add_5</code> has no parameters produces the exact same output as the code where <code>add_5</code> has a parameter. However, the code where <code>add_5</code> has a parameter is preferable to the code where <code>add_5</code> does not have a parameter. The function without the parameter relies on the global variable <code>my_num</code>. If you were to copy/paste this function into another program, it would only work if there was a global variable named <code>my_num</code>. The function with the parameter, however, will work in used in another program. Having the parameter means the function is not dependent upon specific global variables. This reduces the chance for an error.
+</details>
 
 |||
 

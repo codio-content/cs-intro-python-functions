@@ -53,7 +53,22 @@ These functions are modular in that each one draws a shape. More importantly, th
 |||challenge
 ## Tiny House
 Change the code to draw a house that is half of the size of the original.
-<details><summary>**Solution**</summary><img src=".guides/images/small-house.png" /></details>
+<details>
+  <summary><strong>Solution</strong></summary>
+  
+  ```python
+  rectangle(50, 50)
+  reposition(50, 50)
+  triangle(50)
+  reposition(15, 0)
+  rectangle(10, 20)
+  reposition(5, 30)
+  rectangle(10, 10)
+  reposition(35, 30)
+  rectangle(10, 10)
+  ```
+  
+</details>
 
 |||
 

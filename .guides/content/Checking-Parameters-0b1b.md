@@ -32,7 +32,10 @@ addition(5, "cat")
 
 Notice that a green check mark appears even though there is an error in the function call. `try... except` keeps the program running while providing feedback to the user.
 
-<details><summary>**Failing Gracefully**</summary>No computer program works as intended 100% of the time. It is a good idea to design your code to "fail gracefully". That is, your program should not come crashing to a halt with each error. Think of ways that your program can roll with the punches even when mistakes happen.</details>
+<details>
+  <summary><strong>Failing Gracefully</strong></summary>
+  No computer program works as intended 100% of the time. It is a good idea to design your code to "fail gracefully". That is, your program should not come crashing to a halt with each error. Think of ways that your program can roll with the punches even when mistakes happen.
+</details>
 
 |||challenge
 ## What happens if you:
@@ -60,7 +63,17 @@ addition(5, "cat")
 
 {try it}(python3 code/functions/check-parameters.py 4)
 
-<details><summary>**Python Errors**</summary>There are many kinds of [errors](https://docs.python.org/3/tutorial/errors.html) that can be used with the `except` keyword, but here is a list of some of the more common ones:<ul><li>**SyntaxError** - Incorrect syntax; missing parentheses for example</li><li>**ZeroDivisionError** - Divide a number by zero</li><li>**NameError** - Reference a variable that has not been declared</li><li>**TypeError** - Function or operation is applied to an incorrect type</li><li>**IndexError** - Reference an index that is out of range</li></ul></details>
+<details>
+  <summary><strong>Python Errors</strong></summary>
+  There are many kinds of <a href="https://docs.python.org/3/tutorial/errors.html">errors</a> that can be used with the <code>except</code> keyword, but here is a list of some of the more common ones:
+  <ul>
+    <li><strong>SyntaxError</strong> - Incorrect syntax; missing parentheses for example</li>
+    <li><strong>ZeroDivisionError</strong> - Divide a number by zero</li>
+    <li><strong>NameError</strong> - Reference a variable that has not been declared</li>
+    <li><strong>TypeError</strong> - Function or operation is applied to an incorrect type</li>
+    <li><strong>IndexError</strong> - Reference an index that is out of range</li>
+  </ul>
+</details>
 
 |||challenge
 ## What happens if you:

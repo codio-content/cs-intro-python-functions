@@ -34,7 +34,29 @@ turtle.mainloop()
 |||challenge
 ## Add a Door
 Write a new function that adds a door to the house. Hint, move the turtle to an appropriate starting position before drawing the door.
-<details><summary>**One Possible Solution**</summary>Here is one possible solution. Remember to call the function in your program.<img src=".guides/images/turtle-door.png" /></details>
+<details>
+  <summary><strong>One Possible Solution</strong></summary>
+  Here is one possible solution. Remember to call the function in your program.
+  
+  ```python
+  def door():
+      # go to starting position
+      t.rt(90)
+      t.forward(100)
+      t.rt(90)
+      t.forward(60)
+  
+      # draw door
+      t.rt(90)
+      t.forward(40)
+      t.rt(90)
+      t.forward(20)
+      t.rt(90)
+      t.forward(40)
+      t.ht() # hides turtle
+  ```
+  
+</details>
 
 |||
 

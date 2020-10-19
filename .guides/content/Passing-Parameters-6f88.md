@@ -36,7 +36,7 @@ You can think of parameters as variables. They are declared in the function head
 def add_sub(num1, num2, num3):
     """add_sub does the following:
     Add the first two parameters
-    Subtract the third paramter
+    Subtract the third parameter
     Print the result"""
     print(num1 + num2 - num3)
 
