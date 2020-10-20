@@ -32,7 +32,21 @@ print(area(0, 0, 4, 4))
 ## Another way to do powers
 Another way to do powers is to use `math.pow`. This function has two arguments, the base and the exponent. So `3 ** 2` becomes `math.pow(3, 2)`. Rewrite the `return` statements for the two functions above using `math.pow`.
 
-<details><summary>**Solution**</summary> The new return statements are: `return(math.sqrt(math.pow(x2 - x1, 2) + math.pow(y2 - y1, 2)))` and `return(math.pi * math.pow(radius(x1, y1, x2, y2), 2))`</details>
+<details>
+  <summary><strong>Solution</strong></summary>
+  The new return statements are:
+  
+  ```python
+  return(math.sqrt(math.pow(x2 - x1, 2) + math.pow(y2 - y1, 2)))
+  ```
+  
+  and 
+  
+  ```python
+  return(math.pi * math.pow(radius(x1, y1, x2, y2), 2))
+  ```
+  
+</details>
 
 |||
 
@@ -66,7 +80,10 @@ Try to call the `radius` function from your program?
 print(radius(0, 0, 4, 4))
 ```
 
-<details><summary>**Why does this cause an error?**</summary>Just as variables have scope, so do functions. The Python program cannot "see" inside the `area` function, so it cannot call the `radius` function. That is why your code produces the error `NameError: name 'radius' is not defined`.</details>
+<details>
+  <summary><strong>Why does this cause an error?</strong></summary>
+  Just as variables have scope, so do functions. The Python program cannot "see" inside the <code>area</code> function, so it cannot call the <code>radius</code> function. That is why your code produces the error <code>NameError: name 'radius' is not defined</code>.
+</details>
 
 |||
 

@@ -35,7 +35,20 @@ print(new_number)
 
 {try it}(python3 code/functions/returning-values.py 3)
 
-<details><summary>**What is the return value for functions that use `print`?**</summary>If every function in Python has a return value, what is the return value for functions that use `print`? The keyword `return` is not used, so you cannot see if it returns a string, a float, a list, etc. Functions that use `print` instead of `return` have a special return value called `NoneType`. Enter the code below to see the return type of the print statement as compared to the return value of the `len` function.<img src=".guides/images/none-type.png" /></details>
+<details>
+  <summary><strong>What is the return value for functions that use <code>print</code>?</strong></summary>
+  If every function in Python has a return value, what is the return value for functions that use <code>print</code>? The keyword <code>return</code> is not used, so you cannot see if it returns a string, a float, a list, etc. Functions that use <code>print</code> instead of <code>return</code> have a special return value called <code>NoneType</code>. Enter the code below to see the return type of the print statement as compared to the return value of the <code>len</code> function.
+  
+  ```python
+  def print_hello():
+      '''Prints the string Hello'''
+      print('Hello')
+  
+  print(type(print_hello()))
+  print(type(len('Hello')))
+  ```
+  
+</details>
 
 ## Returning Values
 
@@ -64,7 +77,23 @@ print(return_string(" friend"))
 |||challenge
 ## Can you write a function that returns a list?
 If you want to return a list, it is a good idea to have a list be passed as a parameter. Modify the list in some way, and then return it to the program.
-<details><summary>**One possible solution**</summary>The code below takes a list of numbers as a parameter. Each element of the list is multiplied by 5, and the new list is returned. <img src=".guides/images/return-list.png" /></details>
+<details>
+  <summary><strong>One possible solution</strong></summary>
+  The code below takes a list of numbers as a parameter. Each element of the list is multiplied by 5, and the new list is returned.
+  
+  ```python
+  def mult_by_5(my_list):
+      '''Takes a list of ints and returns a new
+      list where each element is multiplied by 5'''
+      new_list = []
+      for elem in my_list:
+          new_list.append(elem * 5)
+      return new_list
+  
+  print(mult_by_5([1, 2, 3, 4, 5]))
+  ```
+  
+</details>
 
 |||
 
