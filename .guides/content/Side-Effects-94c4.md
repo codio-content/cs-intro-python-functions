@@ -6,40 +6,43 @@ Side effects are any changes that a function produces that are external to the f
 
 ### Modify a Global Variable
 
-Global variables can be modified by a function without using the `global` keyword, which is a side effect. In the for loop, the new value of `my_num` is calculated by calling the function `add_5`. You can see the value of `my_num` change each time the loop runs.
+Global variables can be modified by a function when using the `global` keyword, which is a side effect. In the for loop, the new value of `my_num` is calculated by calling the function `add_5()`. You can see the value of `my_num` change each time the loop runs.
 
 ```python
 my_num = 0
 
-def add_5(num):
-    """Receive a number, add 5 tot the number, and
-    return the new number"""
-    return(num + 5)
+def add_5():
+    """Add 5 to my_num"""
+    global my_num
+    my_num += 5
   
 for i in range(10):
-    my_num = add_5(my_num)
+    add_5()
     print(my_num)
+    
+print('The value of my_num is: {}'.format(my_num))
 ```
 
 {try it}(python3 code/functions/side-effects.py 1)
 
 |||challenge
 ## What happens if you:
-* Change the program to look like this:
+* Rewrite the function and loop to avoid side effects:
 ```python
 my_num = 0
 
-def add_5():
-    """Add 5 to my_num and return the new number"""
-    return(my_num + 5)
+def add_5(num):
+    """Receive a number and return that number plus 5"""
+    return(num + 5)
   
 for i in range(10):
-    my_num = add_5()
-    print(my_num)
+    print(add_5(i * 5))
+    
+print(f'The value of my_num is: {my_num}')
 ```
 <details>
-  <summary><strong>Why the above code is not preferred</strong></summary>
-  The code where <code>add_5</code> has no parameters produces the exact same output as the code where <code>add_5</code> has a parameter. However, the code where <code>add_5</code> has a parameter is preferable to the code where <code>add_5</code> does not have a parameter. The function without the parameter relies on the global variable <code>my_num</code>. If you were to copy/paste this function into another program, it would only work if there was a global variable named <code>my_num</code>. The function with the parameter, however, will work in used in another program. Having the parameter means the function is not dependent upon specific global variables. This reduces the chance for an error.
+  <summary><strong>Why the above code is preferred</strong></summary>
+  Both functions sets of code print the same sequence of numbers.However, the code where <code>add_5)_</code> has a parameter is preferable to the code where <code>add_5()</code> uses a global variable. The code sample relies on the global variable <code>my_num</code>. If you were to copy/paste this function into another program, it would only work if there was a global variable named <code>my_num</code>. The function with the parameter, however, will work in another program. Having the parameter means the function is not dependent upon specific global variables. This reduces the chance for an error.
 </details>
 
 |||
@@ -79,6 +82,6 @@ print(output(2))
 
 ### Are Side Effects Bad?
 
-No, side effects are not bad. In fact, they may be the desired result. However, the more side effects a function produces, the greater the risk of introducing a bug. Think about the functions you are writing. If possible, break up your code into several smaller functions, and only introduce side effects when necessary. This may mean you have to write more code, but if this keeps you from having to spend a lot of time debugging, then it it time well spent.
+No, side effects are not bad. In fact, they may be the desired result. However, the more side effects a function produces, the greater the risk of introducing a bug. Think about the functions you are writing. If possible, break up your code into several smaller functions, and only introduce side effects when necessary. This may mean you have to write more code, but if this keeps you from having to spend a lot of time debugging, then it is time well spent.
 
 {Check It!|assessment}(multiple-choice-511526029)
