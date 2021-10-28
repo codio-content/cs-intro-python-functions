@@ -42,7 +42,7 @@ print(f'The value of my_num is: {my_num}')
 ```
 <details>
   <summary><strong>Why the above code is preferred</strong></summary>
-  Both functions sets of code print the same sequence of numbers.However, the code where <code>add_5)_</code> has a parameter is preferable to the code where <code>add_5()</code> uses a global variable. The code sample relies on the global variable <code>my_num</code>. If you were to copy/paste this function into another program, it would only work if there was a global variable named <code>my_num</code>. The function with the parameter, however, will work in another program. Having the parameter means the function is not dependent upon specific global variables. This reduces the chance for an error.
+  Both sets of code print the same sequence of numbers. However, the code where <code>add_5()</code> has a parameter is preferable to the code where <code>add_5()</code> uses a global variable. The code sample that relies on the global variable <code>my_num</code>. If you were to copy/paste this function into another program, it would only work if there was a global variable named <code>my_num</code>. The function with the parameter, however, will work in another program. Having the parameter means the function is not dependent upon specific global variables. This reduces the chance for an error.
 </details>
 
 |||
